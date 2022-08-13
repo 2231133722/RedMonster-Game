@@ -3462,7 +3462,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 529834341}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3836,7 +3836,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 817826847}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3894,7 +3894,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 831714205}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3952,7 +3952,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 842292421}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4010,7 +4010,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 860607866}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4295,7 +4295,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1280569219}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4353,7 +4353,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1362345353}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4411,7 +4411,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1632143512}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4521,7 +4521,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07858467, y: -0.019646347}
+  m_Offset: {x: 0.07026386, y: 0.030275345}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4532,7 +4532,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0216103, y: 3.3182712}
+  m_Size: {x: 1.9716892, y: 3.2849903}
   m_EdgeRadius: 0
 --- !u!50 &1729526234
 Rigidbody2D:
