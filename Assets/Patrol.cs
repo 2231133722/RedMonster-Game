@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Patrol : MonoBehaviour
 {
-
+	public Animator anim;
 	public float speed;
 	public bool MoveRight;
 
@@ -46,11 +46,17 @@ public class Patrol : MonoBehaviour
 			Vector2 direction = other.GetContact(0).normal;
 			if (direction.y == -1)
 			{
-				Destroy(this.gameObject);
+				anim.SetTrigger("Kill");
+				Destroy(this.gameObject, 0.5f);
+				
 			}
 			else {
 				SceneManager.LoadScene(2);
 			}
 		}
+	}
+	public void killObject()
+    {
+		Destroy(this.gameObject);
 	}
 }
