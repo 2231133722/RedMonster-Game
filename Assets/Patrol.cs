@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Patrol : MonoBehaviour
 {
@@ -23,9 +24,9 @@ public class Patrol : MonoBehaviour
 			transform.localScale = new Vector2(1, 1);
 		}
 	}
-	void OnTriggerEnter2D(Collider2D trig)
+	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (trig.gameObject.CompareTag("Turn"))
+		if (other.gameObject.CompareTag("Turn"))
 		{
 
 			if (MoveRight)
@@ -35,6 +36,20 @@ public class Patrol : MonoBehaviour
 			else
 			{
 				MoveRight = true;
+			}
+		}
+	}
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+		if (other.gameObject.CompareTag("Player"))
+		{
+			Vector2 direction = other.GetContact(0).normal;
+			if (direction.y == -1)
+			{
+				Destroy(this.gameObject);
+			}
+			else {
+				SceneManager.LoadScene(2);
 			}
 		}
 	}
