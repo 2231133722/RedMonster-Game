@@ -1291,16 +1291,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 939cc9720d18974438a9d3dfcbf3326b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 800
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 2147483647
   m_GroundCheck: {fileID: 781783538}
   m_CeilingCheck: {fileID: 211725372}
-  m_CrouchDisableCollider: {fileID: 0}
+  m_CrouchDisableCollider: {fileID: 1729526233}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1348,7 +1348,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.97
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
