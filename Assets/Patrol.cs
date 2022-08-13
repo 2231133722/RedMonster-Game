@@ -9,6 +9,7 @@ public class Patrol : MonoBehaviour
     public float speed;
     public bool MoveRight;
     public bool canMove = true;
+    public bool canHurt = true;
 
     // Use this for initialization
     void Update()
@@ -44,19 +45,23 @@ public class Patrol : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (canHurt == true)
         {
-            Vector2 direction = other.GetContact(0).normal;
-            if (direction.y == -1)
+            if (other.gameObject.CompareTag("Player"))
             {
-                anim.SetTrigger("Kill");
-                canMove = false;
-                Destroy(this.gameObject, 0.5f);
+                Vector2 direction = other.GetContact(0).normal;
+                if (direction.y == -1)
+                {
+                    anim.SetTrigger("Kill");
+                    canMove = false;
+                    canHurt = false;
+                    Destroy(this.gameObject, 0.5f);
 
-            }
-            else
-            {
-                SceneManager.LoadScene(2);
+                }
+                else
+                {
+                    SceneManager.LoadScene(2);
+                }
             }
         }
     }
