@@ -52,6 +52,7 @@ public class Patrol : MonoBehaviour
                 Vector2 direction = other.GetContact(0).normal;
                 if (direction.y == -1 || direction.y == 1)
                 {
+                    GetComponent<Collider2D>().enabled = false;
                     anim.SetTrigger("Kill");
                     canMove = false;
                     canHurt = false;
