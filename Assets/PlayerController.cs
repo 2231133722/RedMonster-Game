@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void OnLanding ()
 	{
-		
+		animator.SetBool("isJumping", false);
 	}
 
 	public void OnCrouching (bool isCrouching)
@@ -52,10 +52,5 @@ public class PlayerController : MonoBehaviour {
 		// Move our character
 		controller.Move(horizontalMove * Time.fixedDeltaTime, /*crouch,*/ jump);
 		jump = false;
-		if(controller.m_Grounded == true)
-        {
-			animator.SetBool("isJumping", false);
-		}
-		
 	}
 }
