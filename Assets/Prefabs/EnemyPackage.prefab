@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1100062017293762996}
   - component: {fileID: 1100062017293763002}
   - component: {fileID: 1100062017293763003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point
   m_TagString: Turn
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 1100062017417681589}
   - component: {fileID: 1100062017417681595}
   - component: {fileID: 1100062017417681588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point
   m_TagString: Turn
   m_Icon: {fileID: 0}
