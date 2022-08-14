@@ -3721,6 +3721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795411210}
   - component: {fileID: 795411209}
+  - component: {fileID: 795411211}
   m_Layer: 0
   m_Name: Sprite-0002
   m_TagString: Untagged
@@ -3795,6 +3796,26 @@ Transform:
   m_Father: {fileID: 1729526230}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &795411211
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795411207}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 462dd1863c54c2b4984a610ddce2774d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &817826847
 GameObject:
   m_ObjectHideFlags: 0
