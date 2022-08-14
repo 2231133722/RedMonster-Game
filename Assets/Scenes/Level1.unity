@@ -2899,8 +2899,8 @@ Tilemap:
   - first: {x: 18, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3161,6 +3161,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 1
       m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 18, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3800,19 +3810,19 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 27
     m_Data: {fileID: 11400000, guid: 6fd65e5ce7562c34fbee160c35fa0275, type: 2}
-  - m_RefCount: 248
+  - m_RefCount: 249
     m_Data: {fileID: 11400000, guid: 69a05f641874c15478e7101872de6589, type: 2}
   - m_RefCount: 60
     m_Data: {fileID: 11400000, guid: b73827cca361c5b41a4cc0ae86237651, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 27
     m_Data: {fileID: 21300000, guid: b8793a771a036ee42b28a9a37196f7c9, type: 3}
-  - m_RefCount: 248
+  - m_RefCount: 249
     m_Data: {fileID: 21300000, guid: b08263ecf7461c74193b58e1fb6fed11, type: 3}
   - m_RefCount: 60
     m_Data: {fileID: 21300000, guid: 06840ae8762eb10489620ebe55117ff2, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 335
+  - m_RefCount: 336
     m_Data:
       e00: 1
       e01: 0
@@ -3831,7 +3841,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 335
+  - m_RefCount: 336
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4244,7 +4254,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11.670946, y: -9.788175}
+  m_Offset: {x: 11.670946, y: -9.79686}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4255,7 +4265,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.976139, y: 6.127043}
+  m_Size: {x: 7.976139, y: 6.1096735}
   m_EdgeRadius: 0
 --- !u!1 &831714205
 GameObject:
@@ -4267,6 +4277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 831714206}
   - component: {fileID: 831714207}
+  - component: {fileID: 831714208}
   m_Layer: 3
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -4314,6 +4325,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 5.878086, y: 6.052967}
+  m_EdgeRadius: 0
+--- !u!61 &831714208
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831714205}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 12.736429, y: -5.784866}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9722481, y: 1.9722471}
   m_EdgeRadius: 0
 --- !u!1 &842292421
 GameObject:
@@ -4613,7 +4650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150613066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.9, y: -1.4730674, z: 0}
+  m_LocalPosition: {x: 36.99, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5019,7 +5056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1100062018485874030, guid: dc9f44ba5e30a154c90b3460daf2ce59, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.52
+      value: -0.62
       objectReference: {fileID: 0}
     - target: {fileID: 1100062018485874030, guid: dc9f44ba5e30a154c90b3460daf2ce59, type: 3}
       propertyPath: m_LocalPosition.z
