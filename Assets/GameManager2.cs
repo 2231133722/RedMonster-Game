@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager2 : MonoBehaviour
 {
     public AudioMixer audioMixer;
     //public TMPro.TMP_Dropdown resolutionDropdown;
     //public Button mainMenu;
     //Resolution[] resolutions;
-    public void Start(){
+    public void Start()
+    {
         //resolutions = Screen.resolutions;
         //resolutionDropdown.ClearOptions();
         //List<string> options = new List<string>();
@@ -28,28 +29,31 @@ public class GameManager : MonoBehaviour
         //resolutionDropdown.value = currentResolutionIndex;
         //resolutionDropdown.RefreshShownValue();
     }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
-    }
-    public void PlayGame(){
-        SceneManager.LoadScene(2);
-    }
-    public void MainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
-    public void GameOptions(){
-        SceneManager.LoadScene(1);
-    }
-    public void GameQuit(){
-        Application.Quit();
-    }
-    public void SetVolume(float volume)
-    {
-        audioMixer.SetFloat("Volume", volume);
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Escape))
+    //        Application.Quit();
+    //}
+    //public void PlayGame()
+    //{
+    //    SceneManager.LoadScene(2);
+    //}
+    //public void MainMenu()
+    //{
+    //    SceneManager.LoadScene(0);
+    //}
+    //public void GameOptions()
+    //{
+    //    SceneManager.LoadScene(1);
+    //}
+    //public void GameQuit()
+    //{
+    //    Application.Quit();
+    //}
+    //public void SetVolume(float volume)
+    //{
+    //    audioMixer.SetFloat("Volume", volume);
+    //}
     //public void SetQuality(int qualityIndex){
     //    QualitySettings.SetQualityLevel(qualityIndex);
     //}
