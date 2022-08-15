@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 	public float startDashTime;
 	private int direction;
 	private bool isDashing;
+	private int counterDash;
 
 	private void Start()
     {
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		dashTime = startDashTime;
 		isDashing = false;
+		counterDash = 0;
 	}
     // Update is called once per frame
     void Update () {
@@ -48,12 +50,14 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown("Fire3"))
 		{
 			isDashing = true;
+			counterDash++;
 			direction = 1;
 			
 		}
 		else if (Input.GetButtonDown("Fire2"))
 		{
 			isDashing = true;
+			counterDash++;
 			direction = 2;
 			
 		}
@@ -63,7 +67,7 @@ public class PlayerController : MonoBehaviour {
 			dashTime = startDashTime;
 
 		}
-		if (isDashing == true)
+		if (isDashing == true && counterDash < 2)
 		{
 			dashTime -= Time.deltaTime;
 			if (direction != 0)
@@ -91,6 +95,8 @@ public class PlayerController : MonoBehaviour {
 
 	public void OnLanding ()
 	{
+		isDashing = false;
+		counterDash = 0; 
 		jump = false;
 		animator.SetBool("isJumping", false);
 	}
