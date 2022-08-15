@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyScript : MonoBehaviour
+public class SpikesScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,10 +18,7 @@ public class KeyScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            Destroy(this.gameObject);
+        if(other.gameObject.tag == "Player")
             other.gameObject.transform.position = new Vector2(82.0f, 0.0f);
-        }
     }
 }
