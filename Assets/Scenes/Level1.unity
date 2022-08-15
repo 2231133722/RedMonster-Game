@@ -11806,8 +11806,6 @@ MonoBehaviour:
   animator: {fileID: 795411211}
   aJump: {fileID: 8300000, guid: 7c6911fa959ff604b872e0b1c8e81b71, type: 3}
   runSpeed: 40
-  dashspeed: 60
-  startDashTime: 0.3
 --- !u!114 &1729526232
 MonoBehaviour:
   m_ObjectHideFlags: 0

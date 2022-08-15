@@ -17,21 +17,21 @@ public class PlayerController : MonoBehaviour {
 	bool jump = false;
 	//bool crouch = false;
 
-	private Rigidbody2D rb;
-	public float dashspeed;
-	private float dashTime;
-	public float startDashTime;
-	private int direction;
-	private bool isDashing;
-	private int counterDash;
+	//private Rigidbody2D rb;
+	//public float dashspeed;
+	//private float dashTime;
+	//public float startDashTime;
+	//private int direction;
+	//private bool isDashing;
+	//private int counterDash;
 
 	private void Start()
     {
 		audioSource = GetComponent<AudioSource>();
-		rb = GetComponent<Rigidbody2D>();
-		dashTime = startDashTime;
-		isDashing = false;
-		counterDash = 0;
+		//rb = GetComponent<Rigidbody2D>();
+		//dashTime = startDashTime;
+		//isDashing = false;
+		//counterDash = 0;
 	}
     // Update is called once per frame
     void Update () {
@@ -47,42 +47,44 @@ public class PlayerController : MonoBehaviour {
 			audioSource.PlayOneShot(aJump, 0.5f);
 		}
 
-		if (Input.GetButtonDown("Fire3"))
-		{
-			isDashing = true;
-			counterDash++;
-			direction = 1;
-			
-		}
-		else if (Input.GetButtonDown("Fire2"))
-		{
-			isDashing = true;
-			counterDash++;
-			direction = 2;
-			
-		}
-		else
-		{
-			direction = 0;
-			dashTime = startDashTime;
+		//if (Input.GetButtonDown("Fire2"))
+		//{
+		//	isDashing = true;
+		//	counterDash++;
+  //          //direction = 1;
 
-		}
-		if (isDashing == true && counterDash < 2)
-		{
-			dashTime -= Time.deltaTime;
-			if (direction != 0)
-			{
-				if (direction == 1)
-				{
-					rb.velocity = Vector2.left * dashspeed;
-				}
-				if (direction == 2)
-				{
-					rb.velocity = Vector2.right * dashspeed;
-				}
-			}
+  //      }
+		////else if (Input.GetButtonDown("Fire2"))
+		////{
+		////	isDashing = true;
+		////	counterDash++;
+		////	direction = 2;
+			
+		////}
+		//else
+		//{
+		//	if (dashTime < -0) { 
+		//		dashTime = startDashTime;
+		//		rb.velocity = Vector2.zero;
+		//	}
+		//	else 
+		//	{
+		//	dashTime -= Time.deltaTime;
+		//	//if (direction != 0)
+		//	//{
+		//	//	if (direction == 1)
+		//	//	{
+		//			rb.velocity = new Vector2 (dashspeed * horizontalMove, rb.velocity.y);
+		//		//}
+		//		//if (direction == 2)
+		//		//{
+		//		//	rb.velocity = Vector2.right * dashspeed;
+		//		//}
+		//	//}
 
-		}
+		//	}
+		//}
+		
 		//if (Input.GetButtonDown("Crouch"))
 		//{
 		//	crouch = true;
@@ -95,8 +97,8 @@ public class PlayerController : MonoBehaviour {
 
 	public void OnLanding ()
 	{
-		isDashing = false;
-		counterDash = 0; 
+		//isDashing = false;
+		//counterDash = 0; 
 		jump = false;
 		animator.SetBool("isJumping", false);
 	}
