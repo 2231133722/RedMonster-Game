@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeyScript : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class KeyScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
+            
             other.gameObject.transform.position = new Vector2(82.0f, 0.0f);
         }
     }
