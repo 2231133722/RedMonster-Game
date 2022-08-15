@@ -7,10 +7,16 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+
     public AudioMixer audioMixer;
     //public TMPro.TMP_Dropdown resolutionDropdown;
     //public Button mainMenu;
     //Resolution[] resolutions;
+    private void Awake()
+    {
+        Instance = this;
+    }
     public void Start(){
         //resolutions = Screen.resolutions;
         //resolutionDropdown.ClearOptions();
@@ -33,23 +39,26 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
     }
-    public void PlayGame(){
+    public void PlayGame()
+    {
         SceneManager.LoadScene(2);
     }
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
     }
-    public void GameOptions(){
+    public void GameOptions()
+    {
         SceneManager.LoadScene(1);
     }
-    public void GameQuit(){
+    public void GameQuit()
+    {
         Application.Quit();
     }
-    public void SetVolume(float volume)
-    {
-        audioMixer.SetFloat("Volume", volume);
-    }
+    //public void SetVolume(float volume)
+    //{
+    //    audioMixer.SetFloat("Volume", volume);
+}
     //public void SetQuality(int qualityIndex){
     //    QualitySettings.SetQualityLevel(qualityIndex);
     //}
@@ -62,4 +71,4 @@ public class GameManager : MonoBehaviour
     //}
 
 
-}
+//}

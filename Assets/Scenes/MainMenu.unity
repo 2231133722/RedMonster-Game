@@ -908,8 +908,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 0}
-  resolutionDropdown: {fileID: 0}
-  mainMenu: {fileID: 0}
 --- !u!4 &1783517510
 Transform:
   m_ObjectHideFlags: 0
@@ -1318,7 +1316,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1783517509}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GameOptions
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

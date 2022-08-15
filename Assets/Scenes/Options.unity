@@ -1115,8 +1115,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1638607550}
         m_TargetAssemblyTypeName: GameManager2, Assembly-CSharp
-        m_MethodName: MainMenu
-        m_Mode: 1
+        m_MethodName: SetFullscreen
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2512,7 +2512,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: ac8cb9be474860644baffd87f6b2d7e3, type: 2}
   resolutionDropdown: {fileID: 1483748}
-  mainMenu: {fileID: 0}
 --- !u!1 &1751673278
 GameObject:
   m_ObjectHideFlags: 0

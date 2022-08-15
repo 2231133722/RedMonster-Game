@@ -7,12 +7,13 @@ using UnityEngine.UI;
 
 public class GameManager2 : MonoBehaviour
 {
+    
     public AudioMixer audioMixer;
     public TMPro.TMP_Dropdown resolutionDropdown;
-    public Button mainMenu;
     Resolution[] resolutions;
     public void Start()
     {
+        
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
@@ -36,22 +37,22 @@ public class GameManager2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
     }
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(2);
-    }
-    public void MainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
-    public void GameOptions()
-    {
-        SceneManager.LoadScene(1);
-    }
-    public void GameQuit()
-    {
-        Application.Quit();
-    }
+    //public void PlayGame()
+    //{
+    //    SceneManager.LoadScene(2);
+    //}
+    //public void MainMenu()
+    //{
+    //    SceneManager.LoadScene(0);
+    //}
+    //public void GameOptions()
+    //{
+    //    SceneManager.LoadScene(1);
+    //}
+    //public void GameQuit()
+    //{
+    //    Application.Quit();
+    //}
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("Volume", volume);

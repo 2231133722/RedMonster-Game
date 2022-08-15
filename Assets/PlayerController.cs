@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 
 	float horizontalMove = 0f;
 	bool jump = false;
-	bool crouch = false;
+	//bool crouch = false;
 
     private void Start()
     {
