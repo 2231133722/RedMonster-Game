@@ -8,12 +8,19 @@ public class PlayerController : MonoBehaviour {
 	public CharacterController controller;
 	[SerializeField] public Animator animator;
 
+	public AudioClip aJump;
+	AudioSource audioSource;
+
 	public float runSpeed = 40f;
 
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
-   
+
+    private void Start()
+    {
+		audioSource = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update () {
 
@@ -25,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			jump = true;
 			animator.SetBool("isJumping", true);
+			audioSource.PlayOneShot(aJump, 0.5f);
 		}
 
 		//if (Input.GetButtonDown("Crouch"))

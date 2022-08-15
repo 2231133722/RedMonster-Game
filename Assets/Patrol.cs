@@ -5,12 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class Patrol : MonoBehaviour
 {
+    public AudioClip aHit;
+    AudioSource audioSource;
+    
     public Animator anim;
     public float speed;
     public bool MoveRight;
     public bool canMove = true;
     public bool canHurt = true;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     // Use this for initialization
     void Update()
     {
@@ -56,6 +63,7 @@ public class Patrol : MonoBehaviour
                     anim.SetTrigger("Kill");
                     canMove = false;
                     canHurt = false;
+                    audioSource.PlayOneShot(aHit, 0.7F);
                     Destroy(this.gameObject, 0.5f);
 
                 }
