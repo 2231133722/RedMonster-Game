@@ -15,9 +15,9 @@ public class ThingCheckPoint : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
             other.gameObject.transform.position = new Vector2(82.0f, 0.0f);
     }
 }
