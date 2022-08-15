@@ -31,7 +31,7 @@ public class Granny : MonoBehaviour
                 {
                     GetComponent<Collider2D>().enabled = false;
                     audioSource1.PlayOneShot(aHit1, 0.7F);
-                    Destroy(this.gameObject);
+                    Destroy(this.gameObject, 0.15f);
                 }
                 else
                 {
