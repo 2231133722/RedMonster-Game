@@ -17,10 +17,20 @@ public class PlayerController : MonoBehaviour {
 	bool jump = false;
 	//bool crouch = false;
 
-    private void Start()
+	private Rigidbody2D rb;
+	public float dashspeed;
+	private float dashTime;
+	public float startDashTime;
+	private int direction;
+	private bool isDashing;
+
+	private void Start()
     {
 		audioSource = GetComponent<AudioSource>();
-    }
+		rb = GetComponent<Rigidbody2D>();
+		dashTime = startDashTime;
+		isDashing = false;
+	}
     // Update is called once per frame
     void Update () {
 
@@ -35,6 +45,40 @@ public class PlayerController : MonoBehaviour {
 			audioSource.PlayOneShot(aJump, 0.5f);
 		}
 
+		if (Input.GetButtonDown("Fire3"))
+		{
+			isDashing = true;
+			direction = 1;
+			
+		}
+		else if (Input.GetButtonDown("Fire2"))
+		{
+			isDashing = true;
+			direction = 2;
+			
+		}
+		else
+		{
+			direction = 0;
+			dashTime = startDashTime;
+
+		}
+		if (isDashing == true)
+		{
+			dashTime -= Time.deltaTime;
+			if (direction != 0)
+			{
+				if (direction == 1)
+				{
+					rb.velocity = Vector2.left * dashspeed;
+				}
+				if (direction == 2)
+				{
+					rb.velocity = Vector2.right * dashspeed;
+				}
+			}
+
+		}
 		//if (Input.GetButtonDown("Crouch"))
 		//{
 		//	crouch = true;
@@ -47,6 +91,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void OnLanding ()
 	{
+		jump = false;
 		animator.SetBool("isJumping", false);
 	}
 
@@ -59,6 +104,5 @@ public class PlayerController : MonoBehaviour {
 	{
 		// Move our character
 		controller.Move(horizontalMove * Time.fixedDeltaTime, /*crouch,*/ jump);
-		jump = false;
 	}
 }
