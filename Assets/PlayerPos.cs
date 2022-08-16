@@ -12,9 +12,4 @@ public class PlayerPos : MonoBehaviour
         transform.position = sp.lastCheckPointPos;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
