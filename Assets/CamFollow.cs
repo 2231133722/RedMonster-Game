@@ -5,10 +5,11 @@ using UnityEngine;
 public class CamFollow : MonoBehaviour
 {
     public Transform player;
+    public float xPos, yPos, zPos;
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position + new Vector3(0, 1, -5);
+        transform.position = player.transform.position + new Vector3(xPos, yPos, zPos);
     }
 }
