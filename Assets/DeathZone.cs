@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class DeathZone : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private SavePoint sp;
+
     void Start()
     {
-        
+        sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
     }
 
     // Update is called once per frame
@@ -18,6 +19,6 @@ public class DeathZone : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-       SceneManager.LoadScene(2);       
+        other.gameObject.transform.position = sp.lastCheckPointPos;
     }
 }

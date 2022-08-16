@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ThingCheckPoint : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private SavePoint sp;
+
     void Start()
     {
-        
+        sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
     }
 
     // Update is called once per frame
@@ -18,6 +19,6 @@ public class ThingCheckPoint : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
-            other.gameObject.transform.position = new Vector2(82.0f, 0.0f);
+            other.gameObject.transform.position = sp.lastCheckPointPos; 
     }
 }

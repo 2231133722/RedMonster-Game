@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ThinkKill : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private SavePoint sp;
+
+  
     void Start()
     {
-        
+        sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
     }
 
     // Update is called once per frame
@@ -16,9 +18,9 @@ public class ThinkKill : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if(collision.gameObject.tag == "Player")
-            SceneManager.LoadScene(2);
+        if(other.gameObject.tag == "Player")
+            other.gameObject.transform.position = sp.lastCheckPointPos;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Granny : MonoBehaviour
 {
+    private SavePoint sp;
 
     public AudioClip aHit1;
     AudioSource audioSource1;
@@ -13,6 +14,7 @@ public class Granny : MonoBehaviour
     void Start()
     {
         audioSource1 = GetComponent<AudioSource>();
+        sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
     }
 
     // Update is called once per frame
@@ -35,8 +37,8 @@ public class Granny : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene(2);
-                }
+                    other.gameObject.transform.position = sp.lastCheckPointPos;
+            }
             }
         
     }
