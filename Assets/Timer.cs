@@ -19,6 +19,10 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
+        if(timeRemaining < 10f)
+        {
+            clockText.color = Color.red;
+        }
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
