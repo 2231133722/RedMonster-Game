@@ -7,9 +7,16 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    private SavePoint sp;
+
     public TMP_Text clockText;
 
     public float timeRemaining = 1;
+
+    private void Start()
+    {
+        sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+    }
     void Update()
     {
         if (timeRemaining > 0)
@@ -20,6 +27,7 @@ public class Timer : MonoBehaviour
         else
         {
             timeRemaining = 0;
+            sp.lastCheckPointPos = sp.startCheckPointPos;
             SceneManager.LoadScene(2);
         }
     }
