@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.AddForce(new Vector2(-1, 0)* Random.Range(15f, 25f), ForceMode2D.Impulse);
+       
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
     }
 
