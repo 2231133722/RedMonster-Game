@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Dash
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire3"))
         {
             isDashing = true;
             counterDash++;
