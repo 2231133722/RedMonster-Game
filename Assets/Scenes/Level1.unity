@@ -20009,7 +20009,7 @@ GameObject:
   - component: {fileID: 1056309133787735327}
   - component: {fileID: 1056309133787735326}
   - component: {fileID: 1056309133787735322}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Checkpoint_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20148,6 +20148,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1732940502, guid: ad77fc33b1c10c64abae2f7cb6ccf27a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1056309133753025160, guid: ad77fc33b1c10c64abae2f7cb6ccf27a, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -20195,6 +20199,10 @@ PrefabInstance:
     - target: {fileID: 1056309133753025172, guid: ad77fc33b1c10c64abae2f7cb6ccf27a, type: 3}
       propertyPath: m_Name
       value: Checkpoint_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056309133753025172, guid: ad77fc33b1c10c64abae2f7cb6ccf27a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad77fc33b1c10c64abae2f7cb6ccf27a, type: 3}
