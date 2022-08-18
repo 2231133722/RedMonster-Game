@@ -17,6 +17,7 @@ public class Pie : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject);
+        Score.Instance.AddPie();
+        Destroy(this.gameObject, 0.2f);
     }
 }

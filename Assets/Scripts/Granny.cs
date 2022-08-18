@@ -20,26 +20,27 @@ public class Granny : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        
-            if (other.gameObject.CompareTag("Player"))
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Vector2 direction = other.GetContact(0).normal;
+            if (direction.y == -1 || direction.y == 1)
             {
-                Vector2 direction = other.GetContact(0).normal;
-                if (direction.y == -1 || direction.y == 1)
-                {
-                    GetComponent<Collider2D>().enabled = false;
-                    audioSource1.PlayOneShot(aHit1, 0.7F);
-                    Destroy(this.gameObject, 0.15f);
-                }
-                else
-                {
-                    other.gameObject.transform.position = sp.lastCheckPointPos;
+                Score.Instance.AddHundoPeice();
+                GetComponent<Collider2D>().enabled = false;
+                audioSource1.PlayOneShot(aHit1, 0.7F);
+                Destroy(this.gameObject, 0.15f);
             }
+            else
+            {
+                other.gameObject.transform.position = sp.lastCheckPointPos;
             }
-        
+        }
+
     }
 }

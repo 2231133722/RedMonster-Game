@@ -66,6 +66,7 @@ public class Patrol : MonoBehaviour
                     anim.SetTrigger("Kill");
                     canMove = false;
                     canHurt = false;
+                    Score.Instance.AddHundoPeice();
                     audioSource.PlayOneShot(aHit, 0.7F);
                     Destroy(this.gameObject, 0.5f);
 
