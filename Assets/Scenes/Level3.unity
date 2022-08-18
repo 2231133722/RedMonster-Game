@@ -33147,7 +33147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3269298600546155513, guid: e19332f1ccde78c4d8613bfc03dba859, type: 3}
-  projectile: {fileID: 7133708317542167689, guid: e19332f1ccde78c4d8613bfc03dba859, type: 3}
+  projectile: {fileID: 7133708317542167689, guid: 12bd70123d28357419d328b41daf06a2, type: 3}
   firePoint: {fileID: 1679378782}
   fireForce: 0
   myAudioSource: {fileID: 2026006820}
