@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Blade : MonoBehaviour
+{
+    private Rigidbody2D rb;
+    private SavePoint sp;
+    [SerializeField] private float torqueForce;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+        //rb.AddTorque(torqueForce, ForceMode2D.Force);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Rotate(0, 0, torqueForce);
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            other.gameObject.transform.position = sp.lastCheckPointPos;
+    }
+
+}
