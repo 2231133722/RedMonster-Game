@@ -7,7 +7,6 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    MYJSON myJSON = new MYJSON();
 
     private SavePoint sp;
 
@@ -17,23 +16,13 @@ public class Timer : MonoBehaviour
 
     public float lastTimerValue;
 
-    private string json;
+
 
     private void Start()
     {
 
-        myJSON = JsonUtility.FromJson<MYJSON>(json);
-
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
-
-        if (transform.position == new Vector3(sp.startCheckPointPos.x, sp.startCheckPointPos.y, 0))
-        {
-            timeRemaining = 45;
-        }
-        else
-        {
-            timeRemaining = myJSON.timeRemaining;
-        }
+      
     }
     void Update()
     {
