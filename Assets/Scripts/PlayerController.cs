@@ -118,4 +118,6 @@ public class PlayerController : MonoBehaviour
         // Move our character
         controller.Move(horizontalMove * Time.fixedDeltaTime, /*crouch,*/ jump);
     }
+
+    
 }

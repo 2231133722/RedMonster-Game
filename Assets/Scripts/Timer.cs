@@ -7,7 +7,6 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public static Timer Instance { get; private set; }
 
     private SavePoint sp;
 
@@ -17,12 +16,6 @@ public class Timer : MonoBehaviour
 
     public float lastTimerValue;
 
-    
-
-    private void Awake()
-    {
-        Instance = this;
-    }
     private void Start()
     {
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
