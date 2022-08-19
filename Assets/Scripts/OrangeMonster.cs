@@ -10,6 +10,7 @@ public class OrangeMonster : MonoBehaviour
 
     Rigidbody2D rb;
     Vector2 position;
+    Vector2 initPosition;
 
     private Checkpoint checkpoint;
     private SavePoint sp;
@@ -19,7 +20,8 @@ public class OrangeMonster : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         moveRight = true;
-        position = new Vector2(-10f, -0.08f);
+        position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+        initPosition = position;
         checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
 
@@ -42,7 +44,7 @@ public class OrangeMonster : MonoBehaviour
         //rb.MoveRotation(position.x * 72);
         position.x += 0.05f;
         //position.y += 0.5f*Mathf.Sin(2*Mathf.PI*position.x);
-        if (position.x >= -8)
+        if (position.x >= initPosition.x + 1)
         {
             moveRight = false;
             Flip();
@@ -54,7 +56,7 @@ public class OrangeMonster : MonoBehaviour
         //rb.MoveRotation(position.x * 72);
         position.x -= 0.05f;
         //position.y -= 0.5f*Mathf.Sin(2*Mathf.PI*position.x);
-        if (position.x <= -10)
+        if (position.x <= initPosition.x - 1 )
         {
             moveRight = true;
             Flip();
