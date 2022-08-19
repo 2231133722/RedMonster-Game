@@ -10,6 +10,7 @@ public class PlayerPos : MonoBehaviour
     {
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
         transform.position = sp.lastCheckPointPos;
+        
     }
 
 }

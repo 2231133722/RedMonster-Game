@@ -20,7 +20,9 @@ public class ThinkKill : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player") { 
             other.gameObject.transform.position = sp.lastCheckPointPos;
-    }
+            PlayerPrefs.SetFloat("playerTimerSave", Timer.Instance.timeRemaining);
+            PlayerPrefs.Save();
+    }}
 }

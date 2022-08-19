@@ -7,19 +7,35 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    public static Timer Instance { get; private set; }
+
     private SavePoint sp;
 
     public TMP_Text clockText;
 
-    public float timeRemaining = 1;
+    public float timeRemaining;
 
+    public float lastTimerValue;
+
+    
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+
+       
+        if (sp.startCheckPointPos != new Vector2(-7.0f, 0.0f))
+        {
+            timeRemaining = lastTimerValue;
+        }
     }
     void Update()
     {
-        if(timeRemaining < 10f)
+        if (timeRemaining < 10f)
         {
             clockText.color = Color.red;
         }

@@ -24,7 +24,11 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         Destroy(gameObject);
-        if(other.gameObject.CompareTag("Player"))
-        other.gameObject.transform.position = sp.lastCheckPointPos;
+        if (other.gameObject.CompareTag("Player")) 
+        { 
+            other.gameObject.transform.position = sp.lastCheckPointPos;
+            PlayerPrefs.SetFloat("playerTimerSave", Timer.Instance.timeRemaining);
+            PlayerPrefs.Save();
+        }
     }
 }
