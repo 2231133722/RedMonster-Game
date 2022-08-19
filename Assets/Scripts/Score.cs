@@ -13,8 +13,6 @@ public class Score : MonoBehaviour
 
     public TMP_Text scoreText;
 
-    
-
     private void Awake()
     {
         Instance = this;
@@ -23,21 +21,21 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        
         activeScene = SceneManager.GetActiveScene();
         if (activeScene == SceneManager.GetSceneByBuildIndex(2))
         {
+            PlayerPrefs.SetInt("playerScore", playerStartScore);
+            PlayerPrefs.Save(); 
             playerStartScore = 0;
             scoreText.text = "Score: " + playerStartScore;
-        }else
+        }
+        else
         {
+            playerScore = PlayerPrefs.GetInt("playerScore");
             scoreText.text = "Score: " + playerScore;
         }
-        //else
-        //{
-        //    playerStartScore = PlayerPrefs.GetInt("playerStartScore");
-        //}
-        
-        
     }
 
     // Update is called once per frame
@@ -49,9 +47,13 @@ public class Score : MonoBehaviour
     public void AddHundoPeice()
     {
         playerScore += 100;
+        PlayerPrefs.SetInt("playerScore", playerScore);
+        PlayerPrefs.Save();
     }
     public void AddPie()
     {
         playerScore += 1000;
+        PlayerPrefs.SetInt("playerScore", playerScore);
+        PlayerPrefs.Save();
     }
 }
