@@ -6,6 +6,7 @@ public class Blade : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SavePoint sp;
+    private Checkpoint checkpoint;
     [SerializeField] private float torqueForce;
     [SerializeField] private AudioSource myAudioSource;
     [SerializeField] private AudioClip bladeKill;
@@ -16,6 +17,7 @@ public class Blade : MonoBehaviour
         myAudioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+        checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
         //rb.AddTorque(torqueForce, ForceMode2D.Force);
     }
 
@@ -30,6 +32,7 @@ public class Blade : MonoBehaviour
         {
             myAudioSource.PlayOneShot(bladeKill, 0.7f);
             other.gameObject.transform.position = sp.lastCheckPointPos;
+            checkpoint.dead = true;
         }
     }
 

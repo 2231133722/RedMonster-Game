@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpikesScript : MonoBehaviour
 {
     private SavePoint sp;
+    private Checkpoint checkpoint;
 
     AudioSource myAudioSource;
     public AudioClip spikeHit;
@@ -13,6 +14,7 @@ public class SpikesScript : MonoBehaviour
     {
         myAudioSource = GetComponent<AudioSource>();
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+        checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
     }
 
 
@@ -21,6 +23,7 @@ public class SpikesScript : MonoBehaviour
         if(other.gameObject.tag == "Player") { 
             myAudioSource.PlayOneShot(spikeHit, 0.7f);
             other.gameObject.transform.position = sp.lastCheckPointPos;
+            checkpoint.dead = true;
         }
     }
 }
