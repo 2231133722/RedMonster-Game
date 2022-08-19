@@ -7,6 +7,7 @@ public class SpikesScript : MonoBehaviour
     private SavePoint sp;
     private Checkpoint checkpoint;
 
+
     AudioSource myAudioSource;
     public AudioClip spikeHit;
     // Start is called before the first frame update

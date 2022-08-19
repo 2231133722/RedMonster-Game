@@ -7,6 +7,7 @@ public class Patrol : MonoBehaviour
 {
     private SavePoint sp;
     private Checkpoint checkpoint;
+    private PlayerController player;
 
     public AudioClip aHit;
     AudioSource audioSource;
@@ -19,8 +20,9 @@ public class Patrol : MonoBehaviour
 
     private void Start()
     {
-         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+        sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
         checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         audioSource = GetComponent<AudioSource>();
     }
     // Use this for initialization
@@ -64,6 +66,7 @@ public class Patrol : MonoBehaviour
                 Vector2 direction = other.GetContact(0).normal;
                 if (direction.y == -1 || direction.y == 1)
                 {
+                    player.EnemyKill();
                     GetComponent<Collider2D>().enabled = false;
                     anim.SetTrigger("Kill");
                     canMove = false;

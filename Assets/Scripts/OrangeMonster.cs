@@ -14,6 +14,7 @@ public class OrangeMonster : MonoBehaviour
 
     private Checkpoint checkpoint;
     private SavePoint sp;
+    private PlayerController player;
 
     // Start is called before the first frame update
     private void Start()
@@ -24,6 +25,7 @@ public class OrangeMonster : MonoBehaviour
         initPosition = position;
         checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
     }
 
@@ -81,9 +83,8 @@ public class OrangeMonster : MonoBehaviour
             if (direction.y == -1 || direction.y == 1)
             {
                 //GetComponent<Collider2D>().enabled = false;
-
+                player.EnemyKill();
                 Score.Instance.AddHundoPeice();
-
                 Destroy(this.gameObject, 0.1f);
 
             }

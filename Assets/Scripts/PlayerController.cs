@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     AudioSource audioSource;
 
     public float runSpeed = 40f;
+    public float bounceForce;
 
     float horizontalMove = 0f;
     bool jump = false;
@@ -55,16 +56,10 @@ public class PlayerController : MonoBehaviour
         {
             isDashing = true;
             counterDash++;
-            //direction = 1;
+   
 
         }
-        //else if (Input.GetButtonDown("Fire2"))
-        //{
-        //	isDashing = true;
-        //	counterDash++;
-        //	direction = 2;
 
-        //}
         else
         {
             if (dashTime < -0)
@@ -75,29 +70,11 @@ public class PlayerController : MonoBehaviour
             else if (isDashing == true && counterDash < 2)
             {
                 dashTime -= Time.deltaTime;
-                //if (direction != 0)
-                //{
-                //	if (direction == 1)
-                //	{
+       
                 rb.velocity = new Vector2(dashspeed * horizontalMove, rb.velocity.y);
-                //}
-                //if (direction == 2)
-                //{
-                //	rb.velocity = Vector2.right * dashspeed;
-                //}
-                //}
 
             }
         }
-
-        //if (Input.GetButtonDown("Crouch"))
-        //{
-        //	crouch = true;
-        //} else if (Input.GetButtonUp("Crouch"))
-        //{
-        //	crouch = false;
-        //}
-
     }
 
     public void OnLanding()
@@ -110,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnCrouching(bool isCrouching)
     {
-        //animator.SetBool("IsCrouching", isCrouching);
+       
     }
 
     void FixedUpdate()
@@ -118,6 +95,10 @@ public class PlayerController : MonoBehaviour
         // Move our character
         controller.Move(horizontalMove * Time.fixedDeltaTime, /*crouch,*/ jump);
     }
+    public void EnemyKill()
+    {
+        rb.AddForce(new Vector2(rb.velocity.x, rb.velocity.y * bounceForce), ForceMode2D.Impulse );
 
+    }
     
 }

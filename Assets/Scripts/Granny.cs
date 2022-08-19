@@ -7,6 +7,7 @@ public class Granny : MonoBehaviour
 {
     private SavePoint sp;
     private Checkpoint checkpoint;
+    private PlayerController player;
 
     public AudioClip aHit1;
     AudioSource audioSource1;
@@ -17,6 +18,7 @@ public class Granny : MonoBehaviour
         audioSource1 = GetComponent<AudioSource>();
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
         checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class Granny : MonoBehaviour
             if (direction.y == -1 || direction.y == 1)
             {
                 Score.Instance.AddHundoPeice();
+                player.EnemyKill();
                 GetComponent<Collider2D>().enabled = false;
                 audioSource1.PlayOneShot(aHit1, 0.7F);
                 Destroy(this.gameObject, 0.15f);
