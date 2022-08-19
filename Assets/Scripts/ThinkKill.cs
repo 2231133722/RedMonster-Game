@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class ThinkKill : MonoBehaviour
 {
     private SavePoint sp;
+    private Checkpoint checkpoint;
 
-  
+
     void Start()
     {
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+        checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class ThinkKill : MonoBehaviour
     {
         if(other.gameObject.tag == "Player") { 
             other.gameObject.transform.position = sp.lastCheckPointPos;
-
-    }}
+            checkpoint.dead = true;
+        }
+    }
 }

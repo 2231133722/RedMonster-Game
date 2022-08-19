@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private SavePoint sp;
+    private Checkpoint checkpoint;
 
     public float speed = 20f;
     public Rigidbody2D rb; 
@@ -14,6 +15,7 @@ public class Bullet : MonoBehaviour
     {
        
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+        checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) 
         { 
             other.gameObject.transform.position = sp.lastCheckPointPos;
-
+            checkpoint.dead = true;
         }
     }
 }

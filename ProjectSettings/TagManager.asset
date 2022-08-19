@@ -8,6 +8,7 @@ TagManager:
   - SP
   - Canvas
   - Timer
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

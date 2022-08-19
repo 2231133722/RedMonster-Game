@@ -10,6 +10,10 @@ public class Timer : MonoBehaviour
 
     private SavePoint sp;
 
+    private PlayerPos pp;
+
+    private Checkpoint checkpoint;
+
     public TMP_Text clockText;
 
     public float timeRemaining;
@@ -18,14 +22,24 @@ public class Timer : MonoBehaviour
 
 
 
+
     private void Start()
     {
 
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
-      
+        pp = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPos>();
+        checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
+
+
     }
     void Update()
     {
+        if (checkpoint.dead)
+        {
+            timeRemaining = lastTimerValue;
+            checkpoint.dead = false;
+        }
+
         if (timeRemaining < 10f)
         {
             clockText.color = Color.red;
