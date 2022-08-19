@@ -82,8 +82,9 @@ public class OrangeMonster : MonoBehaviour
             Vector2 direction = other.GetContact(0).normal;
             if (direction.y == -1 || direction.y == 1)
             {
-                //GetComponent<Collider2D>().enabled = false;
+                
                 player.EnemyKill();
+                //GetComponent<Collider2D>().enabled = false;
                 Score.Instance.AddHundoPeice();
                 Destroy(this.gameObject, 0.1f);
 
