@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Turn
   - SP
+  - Canvas
+  - Timer
   layers:
   - Default
   - TransparentFX
