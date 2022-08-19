@@ -22,8 +22,7 @@ public class EndLevelKey : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             sp.lastCheckPointPos = sp.startCheckPointPos;
-            PlayerPrefs.SetInt("playerScore", Score.Instance.playerScore);
-            PlayerPrefs.Save();
+
             SceneManager.LoadScene(4);
             Destroy(this.gameObject);
             

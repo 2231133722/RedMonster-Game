@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Patrol : MonoBehaviour
 {
     private SavePoint sp;
+    private Checkpoint checkpoint;
 
     public AudioClip aHit;
     AudioSource audioSource;
@@ -19,6 +20,7 @@ public class Patrol : MonoBehaviour
     private void Start()
     {
          sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+        checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
         audioSource = GetComponent<AudioSource>();
     }
     // Use this for initialization
@@ -72,8 +74,9 @@ public class Patrol : MonoBehaviour
 
                 }
                 else
-                {
+                {   
                     other.gameObject.transform.position = sp.lastCheckPointPos;
+                    checkpoint.dead = true;
                 }
             }
         }

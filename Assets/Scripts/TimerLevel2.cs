@@ -7,19 +7,38 @@ using TMPro;
 
 public class TimerLevel2 : MonoBehaviour
 {
+    private Scene sceneTwo;
+    private Scene sceneThree;
+
     private SavePoint sp;
+    private PlayerPos pp;
+    private Checkpoint checkpoint;
 
     public TMP_Text clockText;
 
-    public float timeRemaining = 1;
+    public float timeRemaining;
+
+    public float lastTimerValue;
 
     private void Start()
     {
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
+        pp = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPos>();
+        checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
+
+        sceneTwo = SceneManager.GetSceneByBuildIndex(4);
+        sceneThree = SceneManager.GetSceneByBuildIndex(5);
     }
     void Update()
     {
-        if(timeRemaining < 10f)
+
+        if (checkpoint.dead)
+        {
+            timeRemaining = lastTimerValue;
+            checkpoint.dead = false;
+        }
+
+        if (timeRemaining < 10f)
         {
             clockText.color = Color.red;
         }
@@ -32,7 +51,10 @@ public class TimerLevel2 : MonoBehaviour
         {
             timeRemaining = 0;
             sp.lastCheckPointPos = sp.startCheckPointPos;
-            SceneManager.LoadScene(4);
+            if (sceneTwo == SceneManager.GetActiveScene())
+                SceneManager.LoadScene(4);
+            if (sceneThree == SceneManager.GetActiveScene())
+                SceneManager.LoadScene(5);
         }
     }
     void DisplayTime(float timeToDisplay)

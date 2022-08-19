@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Turn
   - SP
+  - Canvas
+  - Timer
+  - Checkpoint
+  - TimerLevel2
   layers:
   - Default
   - TransparentFX
