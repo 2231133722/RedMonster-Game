@@ -85,10 +85,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isJumping", false);
     }
 
-    public void OnCrouching(bool isCrouching)
-    {
-       
-    }
 
     void FixedUpdate()
     {
