@@ -39,8 +39,7 @@ public class Granny : MonoBehaviour
             else
             {
                 other.gameObject.transform.position = sp.lastCheckPointPos;
-                PlayerPrefs.SetFloat("playerTimerSave", Timer.Instance.timeRemaining);
-                PlayerPrefs.Save();
+
             }
         }
 

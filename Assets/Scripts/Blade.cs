@@ -30,8 +30,7 @@ public class Blade : MonoBehaviour
         {
             myAudioSource.PlayOneShot(bladeKill, 0.7f);
             other.gameObject.transform.position = sp.lastCheckPointPos;
-            PlayerPrefs.SetFloat("playerTimerSave", Timer.Instance.timeRemaining);
-            PlayerPrefs.Save();
+
         }
     }
 

@@ -27,11 +27,6 @@ public class Timer : MonoBehaviour
     {
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
 
-       
-        if (sp.startCheckPointPos != new Vector2(-7.0f, 0.0f))
-        {
-            timeRemaining = lastTimerValue;
-        }
     }
     void Update()
     {

@@ -22,7 +22,6 @@ public class ThinkKill : MonoBehaviour
     {
         if(other.gameObject.tag == "Player") { 
             other.gameObject.transform.position = sp.lastCheckPointPos;
-            PlayerPrefs.SetFloat("playerTimerSave", Timer.Instance.timeRemaining);
-            PlayerPrefs.Save();
+
     }}
 }
