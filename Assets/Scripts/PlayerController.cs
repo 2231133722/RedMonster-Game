@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     public float dashspeed;
     private float dashTime;
     public float startDashTime;
-    private int direction;
     private bool isDashing;
     private int counterDash;
 
