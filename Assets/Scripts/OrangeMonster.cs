@@ -24,7 +24,6 @@ public class OrangeMonster : MonoBehaviour
         checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<Checkpoint>();
         sp = GameObject.FindGameObjectWithTag("SP").GetComponent<SavePoint>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-
     }
 
     private void FixedUpdate()
@@ -34,7 +33,6 @@ public class OrangeMonster : MonoBehaviour
 
         if (moveRight == false)
             MoveLeft();
-
 
     }
 
@@ -61,7 +59,6 @@ public class OrangeMonster : MonoBehaviour
             moveRight = true;
             Flip();
         }
-
     }
     void Flip()
     {
@@ -70,7 +67,6 @@ public class OrangeMonster : MonoBehaviour
         if (moveRight == false)
             gameObject.transform.localScale = new Vector3(1, 1, 1);
     }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
 
@@ -93,6 +89,5 @@ public class OrangeMonster : MonoBehaviour
                 checkpoint.dead = true;
             }
         }
-
     }
 }
