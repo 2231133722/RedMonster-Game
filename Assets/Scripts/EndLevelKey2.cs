@@ -17,7 +17,7 @@ public class EndLevelKey2 : MonoBehaviour
     {
 
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTirggerEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
         {
