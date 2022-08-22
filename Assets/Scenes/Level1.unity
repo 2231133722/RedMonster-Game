@@ -19377,6 +19377,8 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 211725372}
   m_CrouchDisableCollider: {fileID: 1729526233}
   m_Grounded: 0
+  fJumpPressedRememberTime: 0.2
+  fGroundedRememberTime: 0.2
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
