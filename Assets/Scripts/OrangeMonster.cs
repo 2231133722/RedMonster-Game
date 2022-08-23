@@ -70,7 +70,7 @@ public class OrangeMonster : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
 
-
+       
         if (other.gameObject.CompareTag("Player"))
         {
             Vector2 direction = other.GetContact(0).normal;

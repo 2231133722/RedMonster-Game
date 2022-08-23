@@ -63,10 +63,6 @@ public class CharacterController : MonoBehaviour
         {
             fJumpPressedRemember = fJumpPressedRememberTime;
         }
-		Debug.Log(fGroundedRemember);
-		Debug.Log(fGroundedRememberTime);
-		Debug.Log(fJumpPressedRemember);
-		Debug.Log(fJumpPressedRememberTime);
 
     }
 	  
