@@ -15826,7 +15826,7 @@ GameObject:
   - component: {fileID: 756948437}
   - component: {fileID: 756948436}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22161,32 +22161,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1100062018386774932
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100062018386774934}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: ee4082d7170399441ba39e8d4b717eda, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.07858586, y: -0.4322201}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.8644395, y: 1.0785855}
-  m_EdgeRadius: 0
 --- !u!4 &1100062018386774933
 Transform:
   m_ObjectHideFlags: 0
@@ -22213,9 +22187,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1100062018386774933}
   - component: {fileID: 1100062018386774931}
-  - component: {fileID: 1100062018386774932}
   - component: {fileID: 1100062018386774930}
   - component: {fileID: 3018659134128178772}
+  - component: {fileID: 3018659134128178773}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
@@ -22598,6 +22572,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &3018659134128178773
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100062018386774934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07025528, y: -0.378977}
+  serializedVersion: 2
+  m_Radius: 0.40355152
 --- !u!1001 &5171633045313483271
 PrefabInstance:
   m_ObjectHideFlags: 0
