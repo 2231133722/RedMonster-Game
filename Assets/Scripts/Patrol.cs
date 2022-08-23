@@ -64,7 +64,7 @@ public class Patrol : MonoBehaviour
             if (other.gameObject.CompareTag("Player"))
             {
                 Vector2 direction = other.GetContact(0).normal;
-                if (direction.y == -1 || direction.y == 1)
+                if (direction.y < -0.5)
                 {
                     player.EnemyKill();
                     GetComponent<Collider2D>().enabled = false;

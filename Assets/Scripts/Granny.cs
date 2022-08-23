@@ -33,7 +33,7 @@ public class Granny : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Vector2 direction = other.GetContact(0).normal;
-            if (direction.y == -1 || direction.y == 1)
+            if (direction.y < -0.5)
             {
                 Score.Instance.AddHundoPeice();
                 player.EnemyKill();

@@ -70,11 +70,11 @@ public class OrangeMonster : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
 
-       
+        Debug.Log("Normal of the first point: " + other.contacts[0].normal);
         if (other.gameObject.CompareTag("Player"))
         {
             Vector2 direction = other.GetContact(0).normal;
-            if (direction.y == -1 || direction.y == 1)
+            if (direction.y < -0.5)
             {
                 
                 player.EnemyKill();
