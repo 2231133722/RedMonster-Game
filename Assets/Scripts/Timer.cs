@@ -44,6 +44,10 @@ public class Timer : MonoBehaviour
         {
             clockText.color = Color.red;
         }
+        else
+        {
+            clockText.color = Color.white;
+        }
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
