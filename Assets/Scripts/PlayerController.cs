@@ -91,7 +91,8 @@ public class PlayerController : MonoBehaviour
     }
     public void EnemyKill()
     {
-        rb.AddForce(new Vector2(0, bounceForce), ForceMode2D.Impulse );
+        if(!jump)
+         rb.AddForce(new Vector2(0, bounceForce), ForceMode2D.Impulse );
 
     }
     
