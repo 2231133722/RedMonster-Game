@@ -21,6 +21,8 @@ public class DeathZone : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Player"))
+            Lives.Instance.MinusLife();
         other.gameObject.transform.position = sp.lastCheckPointPos;
         checkpoint.dead = true;
     }

@@ -30,6 +30,7 @@ public class Blade : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Lives.Instance.MinusLife();
             myAudioSource.PlayOneShot(bladeKill, 0.7f);
             other.gameObject.transform.position = sp.lastCheckPointPos;
             checkpoint.dead = true;

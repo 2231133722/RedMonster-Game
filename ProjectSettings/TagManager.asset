@@ -10,6 +10,7 @@ TagManager:
   - Timer
   - Checkpoint
   - TimerLevel2
+  - Enemy
   layers:
   - Default
   - TransparentFX

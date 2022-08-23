@@ -27,7 +27,8 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
         if (other.gameObject.CompareTag("Player")) 
-        { 
+        {
+            Lives.Instance.MinusLife();
             other.gameObject.transform.position = sp.lastCheckPointPos;
             checkpoint.dead = true;
         }

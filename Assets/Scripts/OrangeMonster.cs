@@ -84,9 +84,11 @@ public class OrangeMonster : MonoBehaviour
 
             }
             else
-            {
+            {   
                 other.gameObject.transform.position = sp.lastCheckPointPos;
                 checkpoint.dead = true;
+                if(other.gameObject.CompareTag("Player"))
+                    Lives.Instance.MinusLife();
             }
         }
     }
