@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Patrol : MonoBehaviour
 {
+    public AudioClip aDeathSound;
+
     private SavePoint sp;
     private Checkpoint checkpoint;
     private PlayerController player;
@@ -78,11 +80,12 @@ public class Patrol : MonoBehaviour
                 }
                 else
                 {
-                    if (other.gameObject.CompareTag("Player"))
+                    if (other.gameObject.CompareTag("Player")) {
                         Lives.Instance.MinusLife();
-                    other.gameObject.transform.position = sp.lastCheckPointPos;
+                        AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
+                        other.gameObject.transform.position = sp.lastCheckPointPos;
                     checkpoint.dead = true;
-                }
+                } }
             }
         }
     }

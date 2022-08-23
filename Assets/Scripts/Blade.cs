@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Blade : MonoBehaviour
 {
+    public AudioClip aDeathSound;
+
     private Rigidbody2D rb;
     private SavePoint sp;
     private Checkpoint checkpoint;
@@ -30,6 +32,7 @@ public class Blade : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
             Lives.Instance.MinusLife();
             myAudioSource.PlayOneShot(bladeKill, 0.7f);
             other.gameObject.transform.position = sp.lastCheckPointPos;

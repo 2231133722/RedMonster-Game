@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c811f7095f2aa1419cbbe6a105d4342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aDeathSound: {fileID: 8300000, guid: e9153e8fad2bbbb47b225525d4ca8291, type: 3}
   torqueForce: 15
   myAudioSource: {fileID: 573987839758134743}
   bladeKill: {fileID: 8300000, guid: 8486c470f6c67dd4aa6e28ec3fd942e0, type: 3}

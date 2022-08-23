@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public AudioClip aDeathSound;
+
     private SavePoint sp;
     private Checkpoint checkpoint;
 
@@ -28,6 +30,7 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
         if (other.gameObject.CompareTag("Player")) 
         {
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
             Lives.Instance.MinusLife();
             other.gameObject.transform.position = sp.lastCheckPointPos;
             checkpoint.dead = true;

@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e885f934e3ac047ae9262e5244b2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aDeathSound: {fileID: 0}
   clockText: {fileID: 16259372}
   timeRemaining: 45
   lastTimerValue: 0
@@ -20120,6 +20121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525d6e192b07c60408eee79bc88e2843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aDeathSound: {fileID: 8300000, guid: e9153e8fad2bbbb47b225525d4ca8291, type: 3}
 --- !u!1 &952463852
 GameObject:
   m_ObjectHideFlags: 0
@@ -75206,6 +75208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4858c25460f41214eb1adcfa83d9671d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aDeathSound: {fileID: 8300000, guid: e9153e8fad2bbbb47b225525d4ca8291, type: 3}
   aHit: {fileID: 8300000, guid: 2a993e34b54e58347849b54c82f01aa1, type: 3}
   anim: {fileID: 1100062018898746216}
   speed: 2

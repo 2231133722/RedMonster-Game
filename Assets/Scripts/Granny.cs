@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Granny : MonoBehaviour
 {
+    public AudioClip aDeathSound;
+
     private SavePoint sp;
     private Checkpoint checkpoint;
     private PlayerController player;
@@ -43,10 +45,11 @@ public class Granny : MonoBehaviour
             }
             else
             {
-                if (other.gameObject.CompareTag("Player"))
+                if (other.gameObject.CompareTag("Player")) {
+                    AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
                     Lives.Instance.MinusLife();
                 other.gameObject.transform.position = sp.lastCheckPointPos;
-                checkpoint.dead = true;
+                checkpoint.dead = true;}
             }
         }
 

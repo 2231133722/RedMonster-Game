@@ -7,7 +7,8 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    
+    public AudioClip aDeathSound;
+
     private SavePoint sp;
 
     private PlayerPos pp;
@@ -56,6 +57,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
             Lives.Instance.MinusLife();
             timeRemaining = 0;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().transform.position = sp.lastCheckPointPos;

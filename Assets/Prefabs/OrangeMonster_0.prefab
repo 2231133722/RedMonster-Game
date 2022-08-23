@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337fda2459a81347b267ae7b3e4e712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aDeathSound: {fileID: 8300000, guid: e9153e8fad2bbbb47b225525d4ca8291, type: 3}
 --- !u!50 &804202275
 Rigidbody2D:
   serializedVersion: 4
@@ -170,3 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337fda2459a81347b267ae7b3e4e712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aDeathSound: {fileID: 0}

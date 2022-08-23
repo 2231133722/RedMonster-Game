@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60fc8f29d09210e4984ae3e39d9cbdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aDeathSound: {fileID: 8300000, guid: e9153e8fad2bbbb47b225525d4ca8291, type: 3}
   spikeHit: {fileID: 8300000, guid: 9a19fe6741ecf964fb2e1bf0af2c15ec, type: 3}
 --- !u!61 &6189926017468151394
 BoxCollider2D:

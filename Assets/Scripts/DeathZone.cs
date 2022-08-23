@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DeathZone : MonoBehaviour
 {
+    public AudioClip aDeathSound;
+
     private SavePoint sp;
     private Checkpoint checkpoint;
 
@@ -21,9 +23,10 @@ public class DeathZone : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) {
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
             Lives.Instance.MinusLife();
         other.gameObject.transform.position = sp.lastCheckPointPos;
-        checkpoint.dead = true;
+        checkpoint.dead = true;}
     }
 }

@@ -6,6 +6,8 @@ public class OrangeMonster : MonoBehaviour
 {
     private bool moveRight;
 
+    public AudioClip aDeathSound;
+
     Rigidbody2D rb;
     Vector2 position;
     Vector2 initPosition;
@@ -84,7 +86,8 @@ public class OrangeMonster : MonoBehaviour
 
             }
             else
-            {   
+            {
+                AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
                 other.gameObject.transform.position = sp.lastCheckPointPos;
                 checkpoint.dead = true;
                 if(other.gameObject.CompareTag("Player"))

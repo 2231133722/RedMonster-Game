@@ -7,6 +7,8 @@ using TMPro;
 
 public class TimerLevel2 : MonoBehaviour
 {
+    public AudioClip aDeathSound;
+
     private Scene sceneTwo;
     private Scene sceneThree;
 
@@ -53,6 +55,7 @@ public class TimerLevel2 : MonoBehaviour
         }
         else
         {
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
             Lives.Instance.MinusLife();
             timeRemaining = 0;
             if (sceneTwo == SceneManager.GetActiveScene())
