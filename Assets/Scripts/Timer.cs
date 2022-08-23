@@ -7,7 +7,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-
+    
     private SavePoint sp;
 
     private PlayerPos pp;
@@ -54,8 +54,8 @@ public class Timer : MonoBehaviour
         {
             Lives.Instance.MinusLife();
             timeRemaining = 0;
-            sp.lastCheckPointPos = sp.startCheckPointPos;
-            SceneManager.LoadScene(2);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().transform.position = sp.lastCheckPointPos;
+            checkpoint.dead = true;
         }
     }
     void DisplayTime(float timeToDisplay)

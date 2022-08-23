@@ -51,11 +51,16 @@ public class TimerLevel2 : MonoBehaviour
         {
             Lives.Instance.MinusLife();
             timeRemaining = 0;
-            sp.lastCheckPointPos = sp.startCheckPointPos;
             if (sceneTwo == SceneManager.GetActiveScene())
-                SceneManager.LoadScene(4);
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().transform.position = sp.lastCheckPointPos;
+                checkpoint.dead = true;
+            }
             if (sceneThree == SceneManager.GetActiveScene())
-                SceneManager.LoadScene(5);
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().transform.position = sp.lastCheckPointPos;
+                checkpoint.dead = true;
+            }
         }
     }
     void DisplayTime(float timeToDisplay)
