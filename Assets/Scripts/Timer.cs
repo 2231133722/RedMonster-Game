@@ -57,7 +57,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.8F);
             Lives.Instance.MinusLife();
             timeRemaining = 0;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().transform.position = sp.lastCheckPointPos;

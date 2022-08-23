@@ -82,7 +82,7 @@ public class Patrol : MonoBehaviour
                 {
                     if (other.gameObject.CompareTag("Player")) {
                         Lives.Instance.MinusLife();
-                        AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
+                        AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.8F);
                         other.gameObject.transform.position = sp.lastCheckPointPos;
                     checkpoint.dead = true;
                 } }

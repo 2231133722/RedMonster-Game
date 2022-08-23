@@ -24,7 +24,7 @@ public class DeathZone : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player")) {
-            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.8F);
             Lives.Instance.MinusLife();
         other.gameObject.transform.position = sp.lastCheckPointPos;
         checkpoint.dead = true;}

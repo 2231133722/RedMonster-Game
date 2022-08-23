@@ -55,7 +55,7 @@ public class TimerLevel2 : MonoBehaviour
         }
         else
         {
-            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.8F);
             Lives.Instance.MinusLife();
             timeRemaining = 0;
             if (sceneTwo == SceneManager.GetActiveScene())

@@ -24,7 +24,7 @@ public class SpikesScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == "Player") {
-            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.8F);
             Lives.Instance.MinusLife();
             myAudioSource.PlayOneShot(spikeHit, 0.7f);
             other.gameObject.transform.position = sp.lastCheckPointPos;

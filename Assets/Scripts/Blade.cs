@@ -32,7 +32,7 @@ public class Blade : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.5F);
+            AudioSource.PlayClipAtPoint(aDeathSound, Camera.main.transform.position, 0.8F);
             Lives.Instance.MinusLife();
             myAudioSource.PlayOneShot(bladeKill, 0.7f);
             other.gameObject.transform.position = sp.lastCheckPointPos;
