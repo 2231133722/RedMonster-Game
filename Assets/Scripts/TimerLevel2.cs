@@ -49,6 +49,7 @@ public class TimerLevel2 : MonoBehaviour
         }
         else
         {
+            Lives.Instance.MinusLife();
             timeRemaining = 0;
             sp.lastCheckPointPos = sp.startCheckPointPos;
             if (sceneTwo == SceneManager.GetActiveScene())

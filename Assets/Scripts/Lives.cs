@@ -47,7 +47,7 @@ public class Lives : MonoBehaviour
         LivesText.text = "Lives: " + playerLives;
         if(playerLives <= 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(6);
         }
     }
 

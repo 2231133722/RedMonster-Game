@@ -52,6 +52,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            Lives.Instance.MinusLife();
             timeRemaining = 0;
             sp.lastCheckPointPos = sp.startCheckPointPos;
             SceneManager.LoadScene(2);
