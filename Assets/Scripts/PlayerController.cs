@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip aJump;
     AudioSource audioSource;
 
-    public float runSpeed = 40f;
+    public float walkspeed = 40f;
+    public float runspeed = 80f;
     public float bounceForce;
 
     float horizontalMove = 0f;
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * walkspeed;
 
         animator.SetBool("isWalking", Convert.ToBoolean(Input.GetAxisRaw("Horizontal")));
 
@@ -49,13 +50,20 @@ public class PlayerController : MonoBehaviour
             audioSource.PlayOneShot(aJump, 0.5f);
         }
 
+        if (Input.GetButton("Fire2"))
+        {
+            walkspeed = 80f;
+        }
+        else
+        {
+            walkspeed = 40f;
+        }
+
         //Dash
         if (Input.GetButtonDown("Fire3"))
         {
             isDashing = true;
             counterDash++;
-   
-
         }
 
         else
